@@ -1,5 +1,5 @@
 name: flutter_todo_sample
-description: A simple beginner-friendly Flutter todo list app.
+description: A colorful local-first Flutter task manager.
 publish_to: 'none'
 version: 1.0.0+1
 
@@ -9,10 +9,25 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  shared_preferences: ^2.5.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.14.4
+  flutter_lints: ^6.0.0
 
 flutter:
   uses-material-design: true
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: assets/app_icon.png
+  adaptive_icon_background: '#36B3A9'
+  adaptive_icon_foreground: assets/app_icon.png
+  web:
+    generate: true
+    image_path: assets/app_icon.png
+    background_color: '#F5F8F6'
+    theme_color: '#178F86'
