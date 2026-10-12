@@ -1,35 +1,34 @@
-# Flutter Todo List Sample
+# Daymark
 
-A simple Flutter app that lets you:
-- Add tasks
-- Mark tasks as completed
-- Delete tasks
-- View a progress bar
+A colorful task manager built with Flutter. Organize tasks by category, set priorities and due dates, search and filter your list, and keep your tasks saved on the device.
 
-## Run in VS Code
+## Requirements
 
-1. Install Flutter and the Flutter/Dart VS Code extensions.
-2. Extract this ZIP.
-3. Open the `flutter_todo_sample` folder in VS Code.
-4. Open Terminal > New Terminal and run:
+- Flutter 3.24 or newer (includes Dart 3.5 or newer)
+- VS Code Flutter and Dart extensions for editor support
+- A browser for the web workflow; Android Studio and Android SDK are only needed for Android builds
 
-   ```powershell
-   flutter pub get
-   flutter run
-   ```
+## Run in GitHub Codespaces
+
+From the project folder, run:
+
+```bash
+flutter pub get
+flutter run -d web-server --web-hostname 0.0.0.0 --web-port 8080
+```
+
+Forward port `8080` from the Codespaces **Ports** tab, then open its forwarded URL. For desktop development, `flutter run` selects an available device.
 
 ## Build an Android APK
 
-From the project root, run:
+Install and configure the Android SDK, accept its licenses with `flutter doctor --android-licenses`, then run:
 
-```powershell
+```bash
 flutter build apk --release
 ```
 
-The APK will be created at:
+The APK is written to `build/app/outputs/flutter-apk/app-release.apk`.
 
-`build/app/outputs/flutter-apk/app-release.apk`
+## Task storage
 
-## Note
-
-This starter version stores tasks in memory only. Tasks reset when the app is fully closed. Persistent storage can be added later.
+Tasks are stored locally on the current device. They are not synced between devices or accounts.
